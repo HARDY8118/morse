@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORSE</title>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        div {
+            flex: 1;
+        }
+        
+        input[type=text] {
+            width: 70%;
+        }
+        
+        button {}
+        
+        span#output {
+            display: block;
+            font-size: 2em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            border: solid 2px gray;
+            padding: 2px;
+            overflow: auto;
+        }
+        
+        input[type=range] {
+            width: 100%;
+        }
+        
+        div#controls {
+            height: 50vh;
+            bottom: 0;
+        }
+        
+        img {
+            width: 100vmin;
+            position: fixed;
+            right: 0;
+        }
+        
+        span#info {
+            position: absolute;
+            z-index: 9;
+            font-size: 0.8em;
+            top: 100px;
+            left: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <input type="text" name="inputText" id="inputText">
+            <button>ENCODE & PLAY</button>
+        </div>
+        <br>
+        <span id="output"></span>
+        <div id="controls">
+            <input type="range" name="downFreq" id="downFreq" value="200" min="0" max="1000"><br>
+            <span>Down Frequency <span id="downVal">200</span></span><br>
+            <input type="range" name="upFreq" id="upFreq" value="600" min="0" max="1000"><br>
+            <span>Up Frequency <span id="upVal">600</span></span><br><br>
+            <hr>
+
+            <input type="range" name="charDuration" id="charDuration" value="0.2" min="0.1" max="4" step="0.1"><br>
+            <span>Character Duration <span id="durationVal">0.2</span>s</span><br><br>
+            <input type="range" name="delay" id="delay" value="0.2" min="0.1" max="4" step="0.1"><br>
+            <span>Delay <span id="delayVal">0.2</span>s</span><br><br>
+            <hr>
+
+            <span>
+                Sound Type
+                <select name="type" id="waveType">
+                    <option value="sine">SINE</option>
+                    <option value="square">SQUARE</option>
+                    <option value="sawtooth">SAWTOOTH</option>
+                    <option value="triangle">TRIANGLE</option>
+                </select>
+            </span>
+        </div>
+    </div>
+    <div class="imageContainer">
+        <img src="https://cdn.shopify.com/s/files/1/2223/4507/files/morse-chart_grande.png?v=1501447409">
+        <span id="info"></span>
+    </div>
+</body>
+
+</html>
