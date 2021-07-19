@@ -1,3 +1,5 @@
-# morse
+# Morse Encoder
 
-Single page webapp to encode morse code using vanilla JavaScript.
+Webapp to encode morse code using vanilla JavaScript.
+
+Sample at [https://hardy8118.github.io/morse/](https://hardy8118.github.io/morse/)
